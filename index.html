@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper">
+                <a class="logo" href="./index.html">
+                    <img class="logo__img" src="./images/svg/logo.svg" alt="Review's logo">
+                </a>
+                <div class="site-header__inner js-header-inner">
+                    <button class="site-header__inner-btn js-close-btn" type="button"></button>
+                    <nav class="site-header__nav">
+                        <ul class="site-header__list">
+                            <li class="site-header__item">
+                                <a class="site-header__link" href="#">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="site-header__link" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                            <li>
+                                <a class="site-header__link" href="#">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="site-header__auth">
+                        <a class="site-header__auth-link sign-in-btn" href="#">Sign in</a>
+                        <a class="site-header__auth-link sign-up-btn" href="#">Sign up</a>
+                    </div>
+                </div>
+                <button class="site-header__btn js-menu-btn" type="button"></button>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__details-wrapper">
+                        <div class="hero__title-wrapper">
+                            <h1 class="hero__title" title="Share your reviews with us.">
+                                Share your rev<span class="hero__title-stage">i</span>ews with us<span class="hero__title-stage">.</span>
+                            </h1>
+                        </div>
+                        <img class="hero__img" src="./images/svg/herobg.svg" alt="hero vector image">
+                        <a class="hero__link" href="#">
+                            Start now...
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__wrapper">
+                    <h2 class="reviews__title" title="Reviews">
+                        Reviews
+                    </h2>
+                    <form class="reviews__form" action="" method="GET" autocomplete="off">
+                        <input class="reviews__input" name="user_query" type="search" placeholder="Filter reviews with name..." aria-label="Filter reviews with name">
+                        <select class="reviews__input reviews__input--selection" name="group" aria-label="Select group">
+                            <option value="" hidden>Filter by group ...</option>
+                            <option value="Books">Books</option>
+                            <option value="App">Application & Softwares</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Games">Games</option>
+                        </select>
+                        <button class="reviews__form-btn" type="submit">Search</button>
+                    </form>
+                    <ul class="reviews__list">
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #movie
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #movie
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #movie
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #app
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #app
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="reviews__item">
+                            <div class="reviews__item-details-wrapper">
+                                <img class="reviews__user-img" src="./images/png/sample.png" width="50" height="50" alt="image">
+                                <div class="reviews__item-details-inner">
+                                    <strong class="reviews__user-name">
+                                        James Gouse
+                                    </strong>
+                                    <a class="reviews__item-tag" href="#">
+                                        #movie
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="reviews__item-general-info">
+                               <div class="reviews__item-general-inner-wrapper">
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        Group:
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Movies
+                                    </span>
+                                </div>
+                                <div class="reviews__item-general-inner">
+                                    <strong class="reviews__item-group-heading">
+                                        About: 
+                                    </strong>
+                                    <span class="reviews__item-group-desc">
+                                        Intersteller
+                                    </span>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="reviews__item-desc-wrapper">
+                                <p class="reviews__item-desc" title="My has one of these. He says it looks microscopic. 
+                                Heard about this on timba radio, decided to give it a try. ">
+                                    “My has one of these. He says it looks microscopic. Heard about this 
+                                    on timba radio, decided to give it a try. “
+
+                                </p>
+                            </div>
+                            <div class="reviews__item-add-info">
+                                <div class="reviews__item-rating-wrapper">
+                                    <p class="reviews__item-rating-desc" title="Rating">
+                                        Rating: 
+                                    </p>
+                                    <img class="reviews__item-rating-img" src="./images/svg/stars.svg" alt="star icon">
+                                </div>
+                                <div class="reviews__item-date-wrapper">
+                                    <p class="reviews__item-date-desc" title="">
+                                        Date: 
+                                        <time class="reivews__item-date" datetime="20-09-2023">
+                                            20.09.2023y 
+                                        </time>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="reviews__btn" type="button">See more...</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__wrapper">
+                <a class="logo logo--footer" href="./index.html">
+                    <img class="logo__img" src="./images/svg/logo.svg" alt="Review's logo">
+                </a>
+                <nav class="site-footer__nav">
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="#">
+                                Reviews
+                            </a>
+                        </li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="site-footer__social-media-list">
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="./images/svg/linkedin.svg" alt="linkedin icon">
+                        </a>
+                    </li>
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="./images/svg/telegram.svg" alt="telegram icon">
+                        </a>
+                    </li>
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="./images/svg/youtube.svg" alt="youtube icon">
+                        </a>
+                    </li>
+                </ul>
+                <span class="copyright">2023 All rights reserved &copy;</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

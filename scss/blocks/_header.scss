@@ -1,0 +1,185 @@
+@use "../mixins" as mx;
+
+.move {
+    top: 0 !important;
+}
+
+@media only screen and (max-width: 855px) {
+    .site-header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logo__img {
+        width: 140px;
+        height: 28px;
+    }
+
+    .site-header__wrapper {
+        @include mx.flexbox(row, center, space-between);
+    }
+
+    .site-header__inner {
+        position: absolute;
+        top: -100vh;
+        left: 50%;
+        translate: -50%; 
+        @include mx.flexbox(column, center, flex-start);
+        row-gap: 35px;
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        padding: 40px 30px 20px 30px;
+        background-color: var(--main-nav-color);
+        transition: top 0.3s ease;
+    }
+
+    .site-header__inner-btn {
+        align-self: flex-end;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        border: none;
+        background: transparent url("../images/svg/close.svg") no-repeat center;
+        background-size: 25px;
+        cursor: pointer;
+
+    }
+
+    .site-header__nav {
+        margin-bottom: 40px;
+    }
+
+    .site-header__list {
+        @include mx.flexbox(column, center, center);
+        row-gap: 40px;
+        @include mx.list-unstyled;
+    }
+
+    .site-header__link {
+        @include mx.typography(inherit, 300, 26px, normal, center, var(--secondary-text-color));
+        text-decoration: none;
+    }
+
+    .site-header__auth {
+        @include mx.flexbox(column, center, center);
+        row-gap: 25px;
+    }
+
+    .site-header__auth-link {
+        min-width: 190px;
+        padding: 16px;
+        @include mx.typography(inherit, 500, 20px, normal, center, var(--secondary-text-color));
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .sign-in-btn {
+        background-color: rgba(128, 155, 206, 0.71);
+    }
+
+    .sign-up-btn {
+        background-color: rgba(128, 155, 206, 0.40);
+    }
+
+    .site-header__btn {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border: none;
+        background: transparent url("../images/svg/menu.svg") no-repeat center;
+        background-size: 30px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 855px) {
+    .site-header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .logo__img {
+        width: 140px;
+        height: 28px;
+    }
+
+    .site-header__wrapper {
+        @include mx.flexbox(row, center, flex-start);
+    }
+
+    .site-header__inner {
+       @include mx.flexbox(row, center, flex-start);
+       width: 100%;
+       margin-left: 140px;
+    }
+
+    .site-header__inner-btn {
+        display: none;
+
+    }
+
+    .site-header__list {
+        @include mx.flexbox(row, center, center);
+        column-gap: 40px;
+        @include mx.list-unstyled;
+    }
+
+    .site-header__link {
+        @include mx.typography(inherit, 300, 18px, normal, center, var(--main-text-color));
+        text-decoration: none;
+        transition: color 0.3s ease;
+       
+        &:hover {
+            color: #3633b6f2;
+        }
+    }
+
+    .site-header__auth {
+        @include mx.flexbox(row, center, center);
+        column-gap: 30px;
+        margin-left: auto;
+    }
+
+    .site-header__auth-link {
+        @include mx.typography(inherit, 500, 18px, normal, center, var(--main-text-color));
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .sign-in-btn {
+        &:hover {
+            color: #3633b6f2;
+        }
+    }
+
+
+    .sign-up-btn {
+        min-width: 150px;
+        padding: 14px;
+        color: var(--secondary-text-color);
+        border-radius: 10px;
+        background-color: #3633b6f2;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+    }
+
+    .site-header__btn {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .site-header__inner {
+        margin-left: 250px;
+    }
+
+}
