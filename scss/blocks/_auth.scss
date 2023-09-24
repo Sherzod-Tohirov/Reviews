@@ -1,24 +1,324 @@
+@use "../mixins" as mx;
+
 @media only screen and (max-width: 375px) {
+    .auth__input {
+        font-size: 14px !important;
+        min-width: 260px !important;
+        &::placeholder {
+            font-size: 14px !important;
+        }
+    }
 
+    .auth__option-link {
+        padding: 12px !important;
+        font-size: 14px !important;
+        letter-spacing: 0.8px !important;
 
+        &::before {
+            width: 20px !important;
+            height: 20px !important;
+        }
+     }
+
+     .auth__forgot-password-link {
+        font-size: 12px !important;
+     }
+
+     .auth__desc {
+        font-size: 12px !important;
+     }
+
+     .auth__form-btn {
+        font-size: 14px !important;
+     }
 
 }
 
-@media only screen and (min-width: 375px) and (max-width: 768px) {
-    
+@media only screen and (min-width: 0) {
+     .auth {
+        padding-top: 60px;
+        padding-bottom: 60px;
+     }
 
+     .auth__wrapper {
+        @include mx.flexbox(column, center, center);
+     }
+
+     .auth__title {
+        margin-top: 0;
+        margin-bottom: 40px;
+        @include mx.typography(inherit, 500, 36px, normal, center, rgba(0, 0, 0, 0.7));
+        letter-spacing: 4px;
+     }
+
+     .auth__form {
+        @include mx.flexbox(column, center, center);
+        margin-bottom: 40px;
+     }
+     
+     .auth__form-group {
+        position: relative;
+     }
+
+     .auth__input {
+        min-width: 330px;
+        padding: 16px;
+        padding-left: 50px;
+        @include mx.typography(inherit, 500, 16px, 120%, start, rgba(0, 0, 0, 0.50));
+        border: 1.5px solid transparent;
+        border-radius: 15px;
+        background-color: rgba(0, 0, 1, 0.02);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+        &::placeholder {
+            @include mx.typography(inherit, 500, 18px, 120%, start, rgba(0, 0, 0, 0.30));
+            letter-spacing: 1.2px;
+        }
+
+     }
+
+     .invalid-input {
+        border-color: #ff0000;
+        &::placeholder {
+            color: #ff0000;
+            opacity: 0.6;
+        }
+     }
+
+     .auth__form-group:not(:last-of-type) .auth__input {
+        margin-bottom: 25px;
+     }
+
+     .last-input-group {
+        margin-bottom: 35px;
+     }
+
+     .auth__input-icon {
+        position: absolute;
+        width: 24px;
+        height: 20px;
+     }
+
+     .icon-email {
+        left: 12px;
+        top: 16px;
+        background: url("../images/svg/msg.svg") no-repeat center;
+        background-size: contain;
+     }
+
+     .icon-password {
+        left: 12px;
+        top: 16px;
+        background: url("../images/svg/lock.svg") no-repeat center;
+        background-size: contain;
+     }
+
+     .icon-eye {
+        top: 16px;
+        right: 12px;
+        background: url("../images/svg/eye.svg") no-repeat center;
+        background-size: contain;
+        opacity: 0.6;
+        cursor: pointer;
+     }
+
+     .icon-eye-close {
+        width: 24px !important;
+        height: 24px !important;
+        background: url("../images/svg/eye-closed.svg") no-repeat center !important;
+        background-size: contain !important;
+     }
+
+     .icon-name {
+        left: 12px;
+        top: 16px;
+        background: url("../images/svg/user.svg") no-repeat center;
+        background-size: contain;
+     }
+
+
+     .auth__forgot-password-link {
+        align-self: flex-start;
+        margin-top: 15px;
+        margin-left: 5px;
+        margin-bottom: 40px;
+        @include mx.typography(inherit, 400, 14px, 120%, start, var(--secondary-bluish-color));
+        letter-spacing: 1px;
+        text-decoration: none;
+        opacity: 0.4;
+     }
+    
+     .auth__form-btn {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+        @include mx.typography(inherit, 400, 17px, 120%, center, rgba(255, 255, 255, 0.80));
+        letter-spacing: 0.8px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(31, 28, 194, 0.80);
+        cursor: pointer;
+     }
+
+     .auth__desc {
+        margin-top: 0;
+        margin-bottom: 0;
+        @include mx.typography(inherit, 400, 14px, normal, center, var(--main-text-color));
+        opacity: 0.7;
+        letter-spacing: 0.8px;
+     }
+
+     .auth__desc-link {
+        color: var(--secondary-bluish-color);
+        text-decoration: none;
+     }
+
+     .auth__option-wrapper {
+        @include mx.flexbox(column, center, center);
+        width: 100%;
+     }
+
+     .auth__option-desc {
+        margin-top: 0;
+        margin-bottom: 30px;
+        @include mx.typography(inherit, 500, 16px, normal, center, rgba(31, 28, 194, 0.42));
+        color: rgba(31, 28, 194, 0.42);
+        letter-spacing: 0.8px;
+     }
+
+     .auth__option-links-wrapper {
+        @include mx.flexbox(column, center, center);
+        row-gap: 20px;
+        width: 100%;
+     }
+
+     .auth__option-link {
+        @include mx.flexbox(row, center, flex-start);
+        max-width: 400px;
+        width: 100%;
+        padding: 14px;
+        padding-left: 18px;
+        @include mx.typography(inherit, 400, 16px, normal, start, rgba(0, 0, 0, 0.8));
+        letter-spacing: 1.4px;
+        text-decoration: none;
+        background-color: rgba(0, 0, 1, 0.02);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+     }
+
+     .linkedin-link {
+        border: 1px solid #0a66c2;
+
+        &::before {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            background: url("../images/svg/linkedin.svg");
+            background-size: contain;
+            content: "";
+        }
+     }
+
+     .google-link {
+        border: 1px solid transparent;
+        border-image: linear-gradient( #EA433557, #FBBC05DC, #11BB2F8A, #34A853B3, #4285F4B0) 1;
+        background: rgba(0, 0, 1, 0.02);
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &::before {
+            width: 24px;
+            height: 24px;
+            margin-right: 20px;
+            background: url("../images/svg/google.svg");
+            background-size: contain;
+            content: "";
+        }
+     }
 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+       .auth {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+       }
+        .auth__input {
+            min-width: 450px !important;
+        }
     
+        .auth__option-link {
+            max-width: 450px !important;
+    
+            &::before {
 
+            }
+         }
 
 }
 
 
 @media only screen and (min-width: 1024px) {
+    .auth {
+        padding-top: 100px !important;
+        padding-bottom: 140px !important;
+       }
+    
+    .auth__title {
+        font-size: 40px;
+    }
 
+    .auth__input {
+        min-width: 550px !important;
+        padding: 22px;
+        padding-left: 54px;
+    }
+
+    .auth__option-link {
+        max-width: 460px !important;
+        }
+
+     .auth__input-icon {
+        position: absolute;
+        width: 24px;
+        height: 20px;
+     }
+
+     .icon-email {
+        left: 18px;
+        top: 22px;
+
+     }
+
+     .icon-password {
+        left: 18px;
+        top: 20px;
+     }
+
+     .icon-eye {
+        top: 22px;
+        right: 18px;
+     }
+     
+     .icon-name {
+        left: 18px;
+        top: 20px;
+        background: url("../images/svg/user.svg") no-repeat center;
+        background-size: contain;
+     }
+
+    
+    .auth__forgot-password-link {
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    .auth__desc {
+    font-size: 16px;
+    }
+
+    .auth__form-btn {
+    padding: 19px;
+    font-size: 20px;
+    }
+    
     
 
 }
