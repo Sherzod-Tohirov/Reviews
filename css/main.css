@@ -351,6 +351,7 @@ template {
   --secondary-bluish-color: #1f1cc2;
   --main-text-color: #000;
   --secondary-text-color: #fff;
+  --main-err-color: #ff0000;
 }
 
 /*Html value for sticky footer*/
@@ -2424,6 +2425,29 @@ img {
   }
   .auth__form-group {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .auth__err-msg {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: normal;
+    text-align: start;
+    color: var(--main-err-color);
+    font-style: oblique;
+    opacity: 0.6;
   }
   .auth__input {
     min-width: 330px;
@@ -2509,7 +2533,7 @@ img {
     color: #ff0000;
     opacity: 0.6;
   }
-  .auth__form-group:not(:last-of-type) .auth__input {
+  .auth__form-group:not(:last-of-type) {
     margin-bottom: 25px;
   }
   .last-input-group {

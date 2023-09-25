@@ -58,6 +58,13 @@
      
      .auth__form-group {
         position: relative;
+        @include mx.flexbox(column, flex-start, center);
+     }
+
+     .auth__err-msg {
+      @include mx.typography(inherit, 400, 15px, normal, start, var(--main-err-color));
+      font-style: oblique;
+      opacity: 0.6;
      }
 
      .auth__input {
@@ -84,7 +91,7 @@
         }
      }
 
-     .auth__form-group:not(:last-of-type) .auth__input {
+     .auth__form-group:not(:last-of-type) {
         margin-bottom: 25px;
      }
 
