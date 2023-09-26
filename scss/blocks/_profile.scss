@@ -1,0 +1,196 @@
+@use "../mixins" as mx;
+
+@media only screen and (max-width: 375px) {
+
+
+
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    
+
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .profile {
+        padding-top: 20px;
+        padding-bottom: 100px;
+        background-color: var(--main-bg);
+    }
+
+    .profile__wrapper {
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        gap: 40px; 
+    }
+
+    .profile__panel-wrapper {
+        @include mx.flexbox(column, center, center);
+        gap: 20px;
+        padding: 20px;
+        border: 1.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile__img-wrapper {
+        @include mx.flexbox(row, center, center);
+        padding: 10px;
+        border: 1px solid transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+    }
+
+    .profile__info-wrapper {
+        @include mx.flexbox(column, center, center);
+        gap: 10px;
+    }
+
+    .profile__user-name {
+        @include mx.remove-margin;
+        @include mx.typography(inherit, 500, 20px, normal, center, var(--main-text-color));
+    }
+
+    .profile__user-mail {
+        @include mx.flexbox(row, center, center);
+        gap: 6px; 
+        @include mx.typography(inherit, 400, 16px, normal, center, rgba(0, 0, 255, 0.9));
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            width: 21px;
+            height: 21px;
+            background: url("../images/svg/msg.svg") no-repeat center;
+            background-size: contain;
+            content: "";
+        }
+
+    }
+
+    
+    .profile__action-btn-wrapper {
+        @include mx.flexbox(column, flex-start, center);
+        gap: 5px;
+        width: 100%;
+    }
+
+    .profile__action-btn {
+        @include mx.flexbox(row, center, center);
+        gap: 10px;
+        width: 100%;
+        padding: 12px;
+        border:none;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.005);
+        @include mx.typography(inherit, 400, 16px, normal, center, var(--main-text-color));
+
+        &::before {
+            width: 25px;
+            height: 25px;
+            content: "";
+        }
+        
+        &:first-child:before {
+           background: url("../images/svg/settings_key_white.svg") no-repeat center;
+           background-size: contain;
+        }
+
+        &:nth-child(2):before {
+            background: url("../images/svg/settings_colored.svg") no-repeat center;
+            background-size: contain;
+         }
+
+         &:nth-child(3):before {
+            background: url("../images/svg/add_review.svg") no-repeat center;
+            background-size: contain;
+         }
+
+         
+    }
+
+    .active-btn {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: var(--secondary-text-color);
+
+        &::before {
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .logout-btn {
+        margin-top: 25px;
+        color: #ff0000;
+        &::before {
+            background: url("../images/svg/logout.svg") no-repeat center;
+            background-size: contain; 
+        }
+    }
+
+    .profile__details-wrapper {
+        @include mx.flexbox(column, flex-start, flex-start);
+        padding: 20px;
+        border: 1.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .profile__settings-wrapper {
+        @include mx.flexbox(column, center, center);
+        width: 100%;
+    }
+
+    .profile__settings-inner-wrapper {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .profile__settings-inner-user {
+        @include mx.flexbox(column, center, flex-start);
+        gap: 20px;
+    }
+
+    .profile__settings-user-img-wrapper {
+        @include mx.flexbox(row, center, center);
+        width: 120px;
+        height: 120px;
+        padding: 10px;
+        border: 1px solid transparent;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+    }
+    
+    .profile__settings-user-img-form {
+        @include mx.flexbox(row, center, center);
+    }
+
+    .profile__settings-user-img-label {
+
+    }
+
+    .profile__settings-user-input {
+        display: none;
+    }
+
+}

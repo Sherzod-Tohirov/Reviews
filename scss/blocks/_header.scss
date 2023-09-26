@@ -8,6 +8,28 @@
     border-bottom: 1.5px solid rgba(0,0,0, 0.1);
 }
 
+.site-header__link { 
+    text-decoration-line: none !important;
+
+    &:hover {
+        text-decoration-line: none !important;
+    }
+}
+
+.site-header__auth-link {
+    text-decoration-line: none !important;
+
+    &:hover {
+        text-decoration-line: none !important;
+    }
+}
+
+.sign-up-btn {
+    &:hover {
+        color: var(--secondary-text-color) !important;
+    }
+}
+
 @media only screen and (max-width: 855px) {
     .site-header {
         padding-top: 20px;

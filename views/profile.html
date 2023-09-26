@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header__wrapper">
+                <a class="logo" href="../index.html">
+                    <img class="logo__img" src="../images/svg/logo.svg" alt="Review's logo">
+                </a>
+                <div class="site-header__inner js-header-inner">
+                    <button class="site-header__inner-btn js-close-btn" type="button"></button>
+                    <nav class="site-header__nav">
+                        <ul class="site-header__list">
+                            <li class="site-header__item">
+                                <a class="site-header__link" href="../index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a class="site-header__link" href="#">
+                                    Reviews
+                                </a>
+                            </li>
+                            <li>
+                                <a class="site-header__link" href="#">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="site-header__auth">
+                        <a class="site-header__auth-link sign-in-btn" href="./login.html">Sign in</a>
+                        <a class="site-header__auth-link sign-up-btn" href="./register.html">Sign up</a>
+                    </div>
+                </div>
+                <button class="site-header__btn js-menu-btn" type="button"></button>
+            </div>
+        </div>
+    </header>
+    <main class="site-main">
+       <section class="profile">
+        <div class="container">
+            <div class="profile__wrapper">
+                <div class="profile__panel-wrapper">
+                     <div class="profile__img-wrapper">
+                        <img class="profile__img" src="../images/png/user.png" width="100" height="100" alt="image">
+                     </div>
+                     <div class="profile__info-wrapper">
+                        <p class="profile__user-name" title="John Doe">
+                            John Doe
+                        </p>
+                        <a class="profile__user-mail" href="mailto:john.doe@mail.ru">john.doe@mail.ru</a>
+                     </div>
+                     <div class="profile__action-btn-wrapper">
+                        <button class="profile__action-btn active-btn" type="button">Profile Settings</button>
+                        <button class="profile__action-btn" type="button">Manage reviews</button>
+                        <button class="profile__action-btn" type="button">Add new review</button>
+                        <button class="profile__action-btn logout-btn" type="button">Logout</button>
+                     </div>
+                </div>
+                <div class="profile__details-wrapper">
+                    
+                    <div class="profile__settings-wrapper">
+                        <h2 class="profile__settings-title h2 text-center mb-5">
+                            Profile Settings
+                        </h2>
+                       <div class="profile__settings-inner-wrapper">
+                        <div class="profile__settings-inner-user">
+                            <div class="profile__settings-user-img-wrapper">
+                               <img class="profile__img" src="../images/png/user.png" width="100" height="100" alt="image">
+                            </div>
+                            <form class="profile__settings-user-img-form">
+                                <label class="profile__settings-user-img-label btn btn-secondary" for="user-image">
+                                    Upload image
+                                    <input class="profile__settings-user-input" id="user-image" type="file">
+                                </label>
+                            </form>
+                        </div>
+                        <div class="profile__settings-inner-form">
+                        
+                            <form class="profile__settings-form">
+                                <div class="form-group">
+                                    <label for="name">Name: </label>
+                                    <input class="form-control" id="name" value="John Doe" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email: </label>
+                                    <input class="form-control" id="email" value="john.doe@mail.ru" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password: </label>
+                                    <input class="form-control" id="password" value="12345678" type="password">
+                                </div>
+                                <a class="btn btn-danger" href="../index.html">Back</a>
+                                <button class="btn btn-primary">Save changes</button>
+                            </form>
+                        </div>
+                       </div>
+                    </div>
+                    <div class="profile__manage-reviews-wrapper">
+
+                    </div>
+                    <div class="profile__add-review-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__wrapper">
+                <a class="logo logo--footer" href="../index.html">
+                    <img class="logo__img" src="../images/svg/logo.svg" alt="Review's logo">
+                </a>
+                <nav class="site-footer__nav">
+                    <ul class="site-footer__list">
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="#">
+                                Reviews
+                            </a>
+                        </li>
+                        <li class="site-footer__item">
+                            <a class="site-footer__link" href="#">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="site-footer__social-media-list">
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="../images/svg/linkedin.svg" alt="linkedin icon">
+                        </a>
+                    </li>
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="../images/svg/telegram.svg" alt="telegram icon">
+                        </a>
+                    </li>
+                    <li class="site-footer__social-media-item">
+                        <a class="site-footer__social-media-link" href="#">
+                            <img class="site-footer__social-media-img" src="../images/svg/youtube.svg" alt="youtube icon">
+                        </a>
+                    </li>
+                </ul>
+                <span class="copyright">2023 All rights reserved &copy;</span>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
