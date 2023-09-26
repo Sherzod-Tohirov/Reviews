@@ -1,5 +1,13 @@
 @use "../mixins" as mx;
 
+.profile__manage-reviews-wrapper {
+    display: none;
+}
+
+.profile__add-review-wrapper {
+    display: none;
+}
+
 @media only screen and (max-width: 375px) {
 
 
@@ -30,6 +38,7 @@
     .profile__wrapper {
         display: grid;
         grid-template-columns: 300px 1fr;
+        align-items: flex-start;
         gap: 40px; 
     }
 
@@ -108,7 +117,7 @@
         }
         
         &:first-child:before {
-           background: url("../images/svg/settings_key_white.svg") no-repeat center;
+           background: url("../images/svg/settings_key.svg") no-repeat center;
            background-size: contain;
         }
 
@@ -188,5 +197,15 @@
     .profile__settings-user-input {
         display: none;
     }
+
+    .profile__add-review-wrapper {
+        width: 100%;
+    }
+
+   .profile__manage-reviews-wrapper {
+        width: 100%;
+    }
+
+
 
 }

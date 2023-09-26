@@ -60,15 +60,15 @@
                         <a class="profile__user-mail" href="mailto:john.doe@mail.ru">john.doe@mail.ru</a>
                      </div>
                      <div class="profile__action-btn-wrapper">
-                        <button class="profile__action-btn active-btn" type="button">Profile Settings</button>
-                        <button class="profile__action-btn" type="button">Manage reviews</button>
-                        <button class="profile__action-btn" type="button">Add new review</button>
-                        <button class="profile__action-btn logout-btn" type="button">Logout</button>
+                        <button class="profile__action-btn js-profile-btn active-btn" type="button" data-id="1">Profile Settings</button>
+                        <button class="profile__action-btn js-manage-review-btn" type="button" data-id="2">Manage reviews</button>
+                        <button class="profile__action-btn js-add-new-review-btn" type="button" data-id="3">Add new review</button>
+                        <button class="profile__action-btn logout-btn js-logout-btn" type="button">Logout</button>
                      </div>
                 </div>
                 <div class="profile__details-wrapper">
                     
-                    <div class="profile__settings-wrapper">
+                    <div class="profile__settings-wrapper" data-id="1">
                         <h2 class="profile__settings-title h2 text-center mb-5">
                             Profile Settings
                         </h2>
@@ -98,6 +98,7 @@
                                 <div class="form-group">
                                     <label for="password">Password: </label>
                                     <input class="form-control" id="password" value="12345678" type="password">
+                                    <span class="auth__input-icon icon-eye js-eye-icon"></span>
                                 </div>
                                 <a class="btn btn-danger" href="../index.html">Back</a>
                                 <button class="btn btn-primary">Save changes</button>
@@ -105,11 +106,63 @@
                         </div>
                        </div>
                     </div>
-                    <div class="profile__manage-reviews-wrapper">
-
+                    <div class="profile__manage-reviews-wrapper" data-id="2">
+                        <h2 class="profile__manage-reviews-title h2 text-center mb-5">Manage reviews</h2>
+                        <table class="table table-bordered rounded table-secondary text-center w-100">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#id</th>
+                                    <th>Name</th>
+                                    <th>Group</th>
+                                    <th>Tags</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6">No review available</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="profile__add-review-wrapper">
-
+                    <div class="profile__add-review-wrapper" data-id="3">
+                        <h2 class="profile__add-review-title h2 text-center mb-5">
+                            Add new review
+                        </h2>
+                        <form class="profile__add-review-form">
+                            <div class="form-group">
+                                <label for="name">Review name: </label>
+                                <input class="form-control" id="name" name="review_name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="group">Choose group: </label>
+                                <select class="form-control" name="review_group" id="group">
+                                    <option value="book">Books</option>
+                                    <option value="movies">Movies</option>
+                                    <option value="games">Games</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tag">Tags: </label>
+                                <input list="tags" class="form-control" id="tag" name="review_tag" type="text">
+                                <datalist id="tags">
+                                    <option value="app"></option>
+                                    <option value="software"></option>
+                                    <option value="games"></option>
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Upload photo (optional): </label>
+                                <input class="form-control" id="photo" name="review_img" type="file">
+                            </div>
+                            <div class="form-group">
+                                <label for="tag">Write your review: </label>
+                                <textarea class="form-control" id="tag" name="review_tag" type="text"></textarea>
+                            </div>
+                            <a class="btn btn-danger" href="../index.html">Back</a>
+                            <button class="btn btn-primary">Add new review</button>
+                        </form>
                     </div>
                 </div>
             </div>

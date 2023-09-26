@@ -2459,6 +2459,14 @@ img {
     font-size: 20px;
   }
 }
+.profile__manage-reviews-wrapper {
+  display: none;
+}
+
+.profile__add-review-wrapper {
+  display: none;
+}
+
 @media only screen and (min-width: 1024px) {
   .profile {
     padding-top: 20px;
@@ -2468,6 +2476,9 @@ img {
   .profile__wrapper {
     display: grid;
     grid-template-columns: 300px 1fr;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     gap: 40px;
   }
   .profile__panel-wrapper {
@@ -2625,7 +2636,7 @@ img {
     content: "";
   }
   .profile__action-btn:first-child:before {
-    background: url("../images/svg/settings_key_white.svg") no-repeat center;
+    background: url("../images/svg/settings_key.svg") no-repeat center;
     background-size: contain;
   }
   .profile__action-btn:nth-child(2):before {
@@ -2750,6 +2761,12 @@ img {
   }
   .profile__settings-user-input {
     display: none;
+  }
+  .profile__add-review-wrapper {
+    width: 100%;
+  }
+  .profile__manage-reviews-wrapper {
+    width: 100%;
   }
 }
 .site-footer__link {
